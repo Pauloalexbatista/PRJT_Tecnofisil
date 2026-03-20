@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <script>
+      if (localStorage.getItem('tecnofisil_gateway_auth') !== 'true') {
+        window.location.href = '/login.html';
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icons/Icon-Imagem.png?v=3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecnofisil | O seu consultor de Engenharia</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="#inicio" class="header-logo-link">
+          <img src="/icons/LOGO.png" alt="Tecnofisil" class="header-logo-img">
+          <div class="brand-text">
+            <span class="brand-name">TECNOFISIL</span>
+            <span class="brand-tagline">Consultores de Engenharia, S.A.</span>
+          </div>
+        </a>
+      </div>
+      <div class="nav-links-container">
+        <div class="nav-links">
+          <a href="#inicio" class="active" data-i18n="nav_home">Início</a>
+          <a href="#empresa" data-i18n="nav_company">Empresa</a>
+          <a href="#estrategia" data-i18n="nav_strategy">Estratégia</a>
+          <a href="#projectos" data-i18n="nav_projects">Projectos</a>
+          <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <a href="#" onclick="event.preventDefault(); window.setLanguage('pt')" class="active" data-lang="pt">PT</a> | 
+          <a href="#" onclick="event.preventDefault(); window.setLanguage('en')" data-lang="en">EN</a> | 
+          <a href="#" onclick="event.preventDefault(); window.setLanguage('es')" data-lang="es">ES</a> | 
+          <a href="#" onclick="event.preventDefault(); window.setLanguage('fr')" data-lang="fr">FR</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="hero">
+        <div class="split-hero-visual">
+          <div class="hero-image reality"></div>
+          <div class="hero-image blueprint"></div>
+          <div class="slider-handle"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-top">
+            <h1 class="hero-title" data-i18n="hero_title">Do Projecto para a Realidade</h1>
+          </div>
+          <div class="hero-bottom">
+            <div class="hero-buttons">
+              <button class="btn btn-green" data-i18n="hero_btn" onclick="window.location.href='#projectos'">Veja os nossos projectos</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empresa Section -->
+      <section id="empresa" class="empresa">
+        <div class="empresa-header">
+           <h2 class="section-title" data-i18n="empresa_title">A Nossa Empresa</h2>
+        </div>
+        <div class="empresa-container">
+          <div class="empresa-content">
+            <h3 data-i18n="empresa_missao_title">Missão e Valores</h3>
+            <p data-i18n="empresa_missao_desc">A nossa prioridade é garantir a satisfação dos nossos Clientes e a qualidade do nosso trabalho. Para isso encontramos soluções criativas e aplicamos princípios de excelência num mercado altamente competitivo.</p>
+            
+            <div class="lideranca">
+              <h3 data-i18n="empresa_lideranca_title">Liderança</h3>
+              <p><strong data-i18n="empresa_lideranca_desc">Nelson Madeira | Director Geral</strong></p>
+            </div>
+
+            <div class="posicionamento">
+              <h3 data-i18n="empresa_posicionamento_title">Posicionamento</h3>
+              <p data-i18n="empresa_posicionamento_desc">Coordenação Geral, Consultoria e Assistência Técnica de Projectos para a Administração Central, Concessionárias e Grupos Construtores.</p>
+            </div>
+          </div>
+          <div class="empresa-logos">
+             <div class="logos-carousel-container">
+               <div class="logos-carousel-track">
+                 <!-- JS will inject dynamic client logos here -->
+               </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estratégia / Especialidades Section -->
+      <section id="estrategia" class="estrategia">
+        <div class="estrategia-header">
+          <h2 class="section-title" data-i18n="estrategia_title">O seu consultor de Engenharia</h2>
+          <p class="section-desc" data-i18n="estrategia_desc">A TECNOFISIL apresenta-se no mercado nacional e internacional com soluções personalizadas de elevado padrão técnico.</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card opacity-0">
+            <div class="service-image-wrapper">
+              <img src="/especialidades/Ferrovia.jpg" alt="Ferrovia" class="service-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            </div>
+            <h3 data-i18n="estrategia_ferrovia_title">Ferrovia</h3>
+            <p data-i18n="estrategia_ferrovia_desc">Experiência de mais de 10 anos em projetos de significativa importância em Portugal, nomeadamente Alta Velocidade.</p>
+          </div>
+          <div class="service-card opacity-0 delay-100">
+            <div class="service-image-wrapper">
+              <img src="/especialidades/rodovia.jpg" alt="Rodovia" class="service-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1468818461933-b1d79f62434e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            </div>
+            <h3 data-i18n="estrategia_rodovia_title">Rodovia</h3>
+            <p data-i18n="estrategia_rodovia_desc">Consultor chave no desenvolvimento da rede de autoestradas e requalificação da Rede Rodoviária Nacional.</p>
+          </div>
+          <div class="service-card opacity-0 delay-200">
+            <div class="service-image-wrapper">
+              <img src="/especialidades/obras.jpg" alt="Obras de Arte" class="service-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513568910411-1ee06b98ea5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            </div>
+            <h3 data-i18n="estrategia_obras_title">Obras de Arte</h3>
+            <p data-i18n="estrategia_obras_desc">Concepção de Estruturas em betão armado pré-esforçado, pré-fabricadas e em aço. Reabilitação e Inspecções.</p>
+          </div>
+          <div class="service-card opacity-0 delay-300">
+            <div class="service-image-wrapper">
+              <img src="/especialidades/edificios.jpg" alt="Edifícios" class="service-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            </div>
+            <h3 data-i18n="estrategia_edificios_title">Edifícios</h3>
+            <p data-i18n="estrategia_edificios_desc">Larga experiência em estruturas de edifícios, fundações e todas as suas especialidades.</p>
+          </div>
+          <div class="service-card opacity-0 delay-400">
+            <div class="service-image-wrapper">
+              <img src="/especialidades/geotecnia.jpg" alt="Geotecnia" class="service-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            </div>
+            <h3 data-i18n="estrategia_geotecnia_title">Geotecnia</h3>
+            <p data-i18n="estrategia_geotecnia_desc">Cartografia Geológica, Geomorfologia, Reologia de Materiais, Terraplenagens e Estabilidade de Taludes, Estruturas de Suporte, Materiais de Pedreiras.</p>
+          </div>
+          <div class="service-card opacity-0 delay-500">
+            <div class="service-image-wrapper">
+              <img src="/especialidades/hidraulica.jpg" alt="Hidráulica" class="service-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1470434767159-ca7beeaba0f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+            </div>
+            <h3 data-i18n="estrategia_hidraulica_title">Hidráulica</h3>
+            <p data-i18n="estrategia_hidraulica_desc">Abastecimento de Água e Saneamento Urbano, Sistemas de irrigação e Estações Elevatórias.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="projectos" class="portfolio">
+        <div class="portfolio-header">
+          <h2 class="section-title" data-i18n="portfolio_title">O nosso trabalho</h2>
+          <p class="section-desc" data-i18n="portfolio_desc">Veja quais são os nossos principais projectos e onde temos trabalhado.</p>
+          
+          <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all" data-i18n="portfolio_filter_all">Todos os Projectos</button>
+            <button class="filter-btn" data-filter="ferrovia" data-i18n="estrategia_ferrovia_title">Ferrovia</button>
+            <button class="filter-btn" data-filter="rodovia" data-i18n="estrategia_rodovia_title">Rodovia</button>
+            <button class="filter-btn" data-filter="edificios" data-i18n="estrategia_edificios_title">Edifícios</button>
+            <button class="filter-btn" data-filter="obras de arte" data-i18n="estrategia_obras_title">Obras de Arte</button>
+            <button class="filter-btn" data-filter="geotecnia" data-i18n="estrategia_geotecnia_title">Geotecnia</button>
+            <button class="filter-btn" data-filter="hidraulica" data-i18n="estrategia_hidraulica_title">Hidráulica</button>
+          </div>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Project Card 1: Linha da Beira-Baixa -->
+          <div class="project-card" data-category="ferrovia">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=800&auto=format&fit=crop" alt="Ferrovia" loading="lazy">
+              <span class="category-badge">FERROVIA</span>
+            </div>
+            <div class="card-content">
+              <h3>Linha da Beira-Baixa: Covilhã-Guarda</h3>
+              <p>Âmbito da obra: [ A inserir ]<br>Ano de Conclusão: [ A inserir ]</p>
+              <div class="card-footer">
+                <span class="location">PORTUGAL</span>
+                <span class="arrow-icon">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2: Évora-Caia -->
+          <div class="project-card" data-category="ferrovia">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1541818167746-8575a7c25785?q=80&w=800&auto=format&fit=crop" alt="Ferrovia" loading="lazy">
+              <span class="category-badge">FERROVIA</span>
+            </div>
+            <div class="card-content">
+              <h3>Nova Ligação Ferroviária Évora-Caia</h3>
+              <p>Âmbito da obra: [ A inserir ]<br>Ano de Conclusão: [ A inserir ]</p>
+              <div class="card-footer">
+                <span class="location">PORTUGAL</span>
+                <span class="arrow-icon">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3: Hotel do Sul -->
+          <div class="project-card" data-category="edificios">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="Edifícios" loading="lazy">
+              <span class="category-badge">EDIFÍCIOS</span>
+            </div>
+            <div class="card-content">
+              <h3>Hotel do Sul</h3>
+              <p>Âmbito da obra: [ A inserir ]<br>Ano de Conclusão: [ A inserir ]</p>
+              <div class="card-footer">
+                <span class="location">PORTUGAL</span>
+                <span class="arrow-icon">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4: EN101 Monção -->
+          <div class="project-card" data-category="rodovia">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1545652985-09a25b2901c0?q=80&w=800&auto=format&fit=crop" alt="Rodovia" loading="lazy">
+              <span class="category-badge">RODOVIA</span>
+            </div>
+        <div class="projects-grid" id="projects-container">
+           <!-- Dynamic Projects will be injected here via Fetch API -->
+           <p style="text-align: center; width: 100%; color: var(--color-text-muted); grid-column: 1 / -1;">A carregar projetos em tempo real...</p>
+        </div>
+      </section>
+
+      <!-- Contacto Section -->
+      <section id="contacto" class="contacto">
+        <div class="contacto-header">
+           <h2 class="section-title" data-i18n="contacto_title">Estamos aqui</h2>
+           <p class="section-desc" data-i18n="contacto_desc">Envie-nos um email ou visite os nossos escritórios.</p>
+        </div>
+        <div class="contacto-grid">
+           <!-- Mapa e Infos -->
+           <div class="contacto-info">
+             <div class="info-item">
+               <h4 data-i18n="contacto_tel_title">Telefone</h4>
+               <p>(+351) 213 504 480</p>
+             </div>
+             <div class="info-item">
+               <h4 data-i18n="contacto_email_title">Email</h4>
+               <p>geral@tecnofisil.pt</p>
+             </div>
+             <div class="info-item">
+               <h4 data-i18n="contacto_address_title">Morada</h4>
+               <p data-i18n="contacto_address_desc">Av. Luís Bívar 85A<br>Lisboa, Portugal</p>
+             </div>
+             <div class="mapa-placeholder">
+               <iframe 
+                 title="Mapa da Localização"
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1556.2755589178224!2d-9.150682!3d38.730248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193370e28dce7b%3A0xc0fb196236b5ecfe!2sAv.%20Lu%C3%ADs%20B%C3%ADvar%2085A%2C%201050-143%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1680000000000!5m2!1spt-PT!2spt" 
+                 width="100%" 
+                 height="250" 
+                 style="border:0;" 
+                 allowfullscreen="" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer-when-downgrade">
+               </iframe>
+             </div>
+           </div>
+
+           <!-- Formulário de Contacto -->
+           <div class="contacto-form-wrapper">
+             <form class="contacto-form">
+                <h3 data-i18n="contacto_form_title">Envie-nos uma mensagem</h3>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Assunto" required>
+                <textarea rows="6" placeholder="Mensagem" required></textarea>
+                <button type="submit" class="btn btn-green" style="width: 100%;" data-i18n="contacto_btn">Enviar Mensagem</button>
+             </form>
+           </div>
+        </div>
+      </section>
+
+      <!-- Footer section -->
+      <footer class="site-footer">
+        <div class="footer-bottom footer-border">
+           <div class="logo-small header-logo-link">
+              <img src="/LOGO.png" alt="Tecnofisil" class="footer-logo-img">
+              <div class="brand-text">
+                <span class="brand-name" style="color: white; font-weight: 900; font-style: italic;">TECNOFISIL</span>
+                <span class="brand-tagline" style="color: #999;">Consultores de Engenharia, S.A.</span>
+              </div>
+           </div>
+           <p>&copy; 2026 Tecnofisil - Consultores de Engenharia, S.A. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </main>
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image-container">
+             <img id="modal-image" src="" alt="Project Image">
+          </div>
+          <div class="modal-info">
+             <h2 id="modal-title"></h2>
+             <p class="modal-meta"><span id="modal-location"></span> • <span id="modal-country"></span></p>
+             <span id="modal-category" class="project-tag"></span>
+             <div class="modal-desc" id="modal-desc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

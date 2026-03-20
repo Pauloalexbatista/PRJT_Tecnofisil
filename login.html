@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso Reservado - Tecnofisil</title>
+  <!-- Google Fonts for Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('/projectos/Capa1.png');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .login-container {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      backdrop-filter: blur(10px);
+    }
+    .login-container img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+    input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: inherit;
+    }
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #008037;
+      box-shadow: 0 0 0 2px rgba(0, 128, 55, 0.2);
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #008037; /* Tecnofisil green */
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #00662c;
+    }
+    .error {
+      color: #d32f2f;
+      font-size: 14px;
+      display: none;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="login-container">
+    <img src="/icons/LOGO.png" alt="Tecnofisil Logo" onerror="this.onerror=null; this.src='/LOGO.png'">
+    <h2>Acesso Reservado</h2>
+    <p>Área de testes. Insira a password para continuar.</p>
+    <form id="loginForm">
+      <input type="password" id="password" placeholder="Password" required autofocus>
+      <button type="submit">Entrar no Site</button>
+      <div id="errorMsg" class="error">Password incorreta! Tente novamente.</div>
+    </form>
+  </div>
+
+  <script>
+    // Limpa qualquer sessão anterior ao carregar a página de login
+    localStorage.removeItem('tecnofisil_gateway_auth');
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const pwd = document.getElementById('password').value;
+      if (pwd === 'tecnofisil2026') {
+        localStorage.setItem('tecnofisil_gateway_auth', 'true');
+        // Abre o admin noutra aba
+        window.open('/admin.html', '_blank');
+        // Redireciona a aba atual para o site principal
+        window.location.href = '/';
+      } else {
+        document.getElementById('errorMsg').style.display = 'block';
+        document.getElementById('password').value = '';
+        setTimeout(() => {
+            document.getElementById('errorMsg').style.display = 'none';
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>
