@@ -11,6 +11,9 @@ COPY package*.json ./
 # Instalar as dependências
 RUN npm install
 
+# Forçar a recompilação do sqlite3 com a biblioteca C correta (GLIBC_2.36 no Bookworm)
+RUN npm rebuild sqlite3 --build-from-source
+
 # Copiar o resto do código
 COPY . .
 
