@@ -144,7 +144,7 @@ app.delete('/api/translations/:key', async (req, res) => {
 
 // Initialize database and start server
 initDb().then(() => {
-    app.listen(PORT, () => {
-        console.log(`🚀 API Server running on http://localhost:${PORT}`);
+    app.listen(PORT, '0.0.0.0', () => {
+        console.log(`🚀 API Server running on http://0.0.0.0:${PORT}`);
     });
 }).catch(console.error);
