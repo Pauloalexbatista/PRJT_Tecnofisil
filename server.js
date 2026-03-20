@@ -14,8 +14,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// For local testing without Vite compilation, serve static files directly.
-app.use(express.static('.'));
+// Serve built Vite files in production, or raw files locally
+const distPath = path.join(__dirname, 'dist');
+if (fs.existsSync(distPath)) {
+    app.use(express.static(distPath));
+} else {
+    app.use(express.static('.'));
+}
 
 // --- CLIENTES (CARROSEL) API ---
 app.get('/api/clientes', (req, res) => {
